@@ -1,2 +1,2 @@
-# React-Components-Typescript
+# react-components-typescript
 
