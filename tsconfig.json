@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "declaration": true,
+    "declarationMap": true,
+    "jsx": "react",
+    "lib": [
+      "DOM",
+      "ESNext",
+    ],
+    "target": "ES2016",
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "removeComments": true,
+    "noImplicitThis": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    /* 模块解析 */
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+  },
+  "include": [
+    "./src"
+  ],
+  "exclude": [
+
+  ]
+}
