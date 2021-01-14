@@ -22,22 +22,30 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.EIsScroll = void 0;
 const react_1 = __importStar(require("react"));
-const lib_scrollBarEventAnimation_1 = require("../../lib/lib.scrollBarEventAnimation");
 const ScrollBarEventAnimation_1 = __importDefault(require("../../utils/ScrollBarEventAnimation"));
+/**
+ * 判断当前的操作元素
+ */
+var EIsScroll;
+(function (EIsScroll) {
+    EIsScroll["scroll"] = "scroll";
+    EIsScroll["scrollWrapper"] = "scrollWrapper";
+})(EIsScroll = exports.EIsScroll || (exports.EIsScroll = {}));
 const DefaultBar = (props) => {
     const [barH] = react_1.useState(0);
     const scrollBarWrapperRefs = react_1.useRef(null);
     const scrollBarRefs = react_1.useRef(null);
     react_1.useEffect(() => {
-        const containerWrapper = props.containerWrapper.current;
-        const containerScroll = props.containerScroll.current;
-        const scrollWrapper = scrollBarWrapperRefs.current;
-        const scroll = scrollBarRefs.current;
+        const containerWrapper = props.containerWrapper.current; // 展示内容容器
+        const containerScroll = props.containerScroll.current; // 滚动内容容器
+        const scrollWrapper = scrollBarWrapperRefs.current; // 滚动条容器
+        const scroll = scrollBarRefs.current; // 滚动条
         new ScrollBarEventAnimation_1.default(containerWrapper, containerScroll, scrollWrapper, scroll);
     }, []);
     return (react_1.default.createElement(react_1.default.Fragment, null,
-        react_1.default.createElement("div", { "data-dom": lib_scrollBarEventAnimation_1.EIsScroll.scrollWrapper, ref: scrollBarWrapperRefs, style: Object.assign({ width: 4, height: "100%", background: "rgba(134, 134, 134, 0.7)", position: "absolute", right: 0, top: 0, borderRadius: 2 }, props.containerWrapperStyle) },
-            react_1.default.createElement("div", { "data-dom": lib_scrollBarEventAnimation_1.EIsScroll.scroll, ref: scrollBarRefs, style: Object.assign({ width: 4, position: "absolute", right: 0, top: 0, borderRadius: 2, height: barH, background: "rgba(255, 255, 255, 0.7)", transition: "all 0.7s", cursor: "pointer" }, props.containerScrollStyle) }))));
+        react_1.default.createElement("div", { "data-dom": EIsScroll.scrollWrapper, ref: scrollBarWrapperRefs, style: Object.assign({ width: 4, height: "100%", background: "rgba(134, 134, 134, 0.7)", position: "absolute", right: 0, top: 0, borderRadius: 2 }, props.containerWrapperStyle) },
+            react_1.default.createElement("div", { "data-dom": EIsScroll.scroll, ref: scrollBarRefs, style: Object.assign({ width: 4, position: "absolute", right: 0, top: 0, borderRadius: 2, height: barH, background: "rgba(255, 255, 255, 0.7)", transition: "all 0.7s", cursor: "pointer" }, props.containerScrollStyle) }))));
 };
 exports.default = DefaultBar;

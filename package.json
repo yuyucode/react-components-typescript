@@ -1,7 +1,7 @@
 {
   "name": "react-components-typescript",
   "main": "./dist/index.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Components for React + Typescript",
   "repository": "https://github.com/yuyucode1125/react-components-typescript.git",
   "author": "yuyucode <1440771511@qq.com>",

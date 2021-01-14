@@ -5,7 +5,7 @@ import {
   IContainerProps,
   IContainerWrapperProps,
   IMousewheel, IScrollProps, IScrollWrapperProps, TDirection
-} from "../lib/lib.scrollBarEventAnimation";
+} from "../bin/ScrollBar";
 
 
 /**

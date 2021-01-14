@@ -12,7 +12,7 @@
     "target": "ES2016",
     "module": "CommonJS",
     "outDir": "./dist",
-    "removeComments": true,
+    "removeComments": false,
     "noImplicitThis": true,
     "strictBindCallApply": true,
     "strictFunctionTypes": true,
